@@ -1,0 +1,43 @@
+
+> sb-consulting-cloud@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.3
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.102:3000
+   - Experiments (use with caution):
+     ✓ mdxRs
+
+ ✓ Starting...
+ ✓ Ready in 1582ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1375ms (681 modules)
+ HEAD / 200 in 1775ms
+ ✓ Compiled /contact in 465ms (688 modules)
+ GET /contact 200 in 1011ms
+ ✓ Compiled /about in 404ms (684 modules)
+ GET /about 200 in 654ms
+ ✓ Compiled /services in 238ms (689 modules)
+ GET /services 200 in 377ms
+ ✓ Compiled /blog in 254ms (696 modules)
+ GET /blog 200 in 340ms
+ ✓ Compiled /testimonials in 217ms (667 modules)
+ GET /testimonials 200 in 384ms
+ GET /testimonials 200 in 40ms
+ GET /testimonials 200 in 32ms
+ ✓ Compiled / in 359ms (418 modules)
+ GET / 200 in 592ms
+ ✓ Compiled in 893ms (692 modules)
+ ✓ Compiled in 363ms (692 modules)
+ ✓ Compiled /about in 216ms (434 modules)
+ GET /about 200 in 434ms
+ ✓ Compiled /services in 180ms (431 modules)
+ GET /services 200 in 370ms
+ GET /contact 200 in 29ms
+ ✓ Compiled / in 162ms (418 modules)
+ GET / 200 in 424ms
+ GET / 200 in 37ms
+ ✓ Compiled /about in 140ms (434 modules)
+ GET /about 200 in 314ms
+ HEAD / 200 in 291ms
+[?25h
