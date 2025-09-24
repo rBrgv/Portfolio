@@ -36,7 +36,7 @@ const ProcessStepper: React.FC<ProcessStepperProps> = ({
   const [isPaused, setIsPaused] = useState(false);
   const [progress, setProgress] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  const progressIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const progressIntervalRef = useRef<number | null>(null);
   const shouldReduceMotion = useReducedMotion();
 
   // Progress bar animation
