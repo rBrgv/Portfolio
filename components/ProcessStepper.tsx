@@ -39,14 +39,6 @@ const ProcessStepper: React.FC<ProcessStepperProps> = ({
   const progressIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const shouldReduceMotion = useReducedMotion();
 
-  // Guard against invalid steps
-  if (!steps || steps.length === 0) {
-    return <div className="p-8 text-center text-gray-500">No steps provided</div>;
-  }
-
-  const maxSteps = Math.min(steps.length, 4);
-  const currentStep = steps[currentIndex];
-
   // Progress bar animation
   const animateProgress = useCallback(() => {
     if (shouldReduceMotion) {
@@ -110,6 +102,14 @@ const ProcessStepper: React.FC<ProcessStepperProps> = ({
   useEffect(() => {
     onStepChange?.(currentIndex);
   }, [currentIndex, onStepChange]);
+
+  // Guard against invalid steps
+  if (!steps || steps.length === 0) {
+    return <div className="p-8 text-center text-gray-500">No steps provided</div>;
+  }
+
+  const maxSteps = Math.min(steps.length, 4);
+  const currentStep = steps[currentIndex];
 
   // Manual navigation
   const goToStep = (index: number) => {

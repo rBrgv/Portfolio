@@ -49,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+        <script src="https://cdn.lordicon.com/lordicon.js" async></script>
       </head>
         <body className={`${inter.variable} ${poppins.variable} ${spaceGrotesk.variable} ${dancingScript.variable} font-sans antialiased`}>
             <ThemeProvider

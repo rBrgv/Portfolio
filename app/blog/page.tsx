@@ -354,7 +354,7 @@ export default function Blog() {
   const postsPerPage = 6;
 
   // Get all unique tags
-  const allTags = [...new Set(blogPosts.flatMap(post => post.tags))];
+  // const allTags = [...new Set(blogPosts.flatMap(post => post.tags))];
 
   // Filter posts based on search, category, and tag
   const filteredPosts = useMemo(() => {
@@ -513,7 +513,7 @@ export default function Blog() {
 
           {/* Blog Posts Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {paginatedPosts.map((post, index) => (
+            {paginatedPosts.map((post) => (
               <div key={post.slug} className="group">
                 <GlassCard className="h-full">
                   <div className="mb-4">
