@@ -35,12 +35,12 @@ const ProcessStepper: React.FC<ProcessStepperProps> = ({
   const [currentIndex, setCurrentIndex] = useState(startIndex);
   const [isPaused, setIsPaused] = useState(false);
   const [progress, setProgress] = useState(0);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<number | null>(null);
   const progressIntervalRef = useRef<number | null>(null);
   const shouldReduceMotion = useReducedMotion();
 
   // Calculate maxSteps early to avoid hoisting issues
-  const maxSteps = steps ? Math.min(steps.length, 4) : 0;
+  const maxSteps = steps?.length ? Math.min(steps.length, 4) : 0;
 
   // Progress bar animation
   const animateProgress = useCallback(() => {
@@ -84,19 +84,19 @@ const ProcessStepper: React.FC<ProcessStepperProps> = ({
     if (!autoPlay || isPaused) return;
 
     // Clear existing intervals
-    if (intervalRef.current) clearTimeout(intervalRef.current);
+    if (intervalRef.current) window.clearTimeout(intervalRef.current);
     if (progressIntervalRef.current) cancelAnimationFrame(progressIntervalRef.current);
 
     // Start progress animation
     animateProgress();
 
     // Set up auto-advance
-    intervalRef.current = setTimeout(() => {
+    intervalRef.current = window.setTimeout(() => {
       advanceStep();
     }, autoPlayIntervalMs);
 
     return () => {
-      if (intervalRef.current) clearTimeout(intervalRef.current);
+      if (intervalRef.current) window.clearTimeout(intervalRef.current);
       if (progressIntervalRef.current) cancelAnimationFrame(progressIntervalRef.current);
     };
   }, [currentIndex, autoPlay, isPaused, autoPlayIntervalMs, animateProgress, advanceStep]);
@@ -111,7 +111,7 @@ const ProcessStepper: React.FC<ProcessStepperProps> = ({
     return <div className="p-8 text-center text-gray-500">No steps provided</div>;
   }
 
-  const currentStep = steps[currentIndex];
+  const currentStep = steps?.[currentIndex];
 
   // Manual navigation
   const goToStep = (index: number) => {
@@ -121,7 +121,7 @@ const ProcessStepper: React.FC<ProcessStepperProps> = ({
     setProgress(0);
     
     // Clear existing intervals
-    if (intervalRef.current) clearTimeout(intervalRef.current);
+    if (intervalRef.current) window.clearTimeout(intervalRef.current);
     if (progressIntervalRef.current) cancelAnimationFrame(progressIntervalRef.current);
   };
 
@@ -259,14 +259,14 @@ const ProcessStepper: React.FC<ProcessStepperProps> = ({
                   </div>
                 )}
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                  {currentStep.title}
+                  {currentStep?.title}
                 </h3>
-                {currentStep.subtitle && (
+                {currentStep?.subtitle && (
                   <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">
                     {currentStep.subtitle}
                   </p>
                 )}
-                {currentStep.content && (
+                {currentStep?.content && (
                   <p className="text-gray-700 dark:text-gray-400">
                     {currentStep.content}
                   </p>
@@ -394,14 +394,14 @@ const ProcessStepper: React.FC<ProcessStepperProps> = ({
                   </div>
                 )}
                 <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 text-center">
-                  {currentStep.title}
+                  {currentStep?.title}
                 </h3>
-                {currentStep.subtitle && (
+                {currentStep?.subtitle && (
                   <p className="text-xl text-gray-600 dark:text-gray-300 mb-6 text-center">
                     {currentStep.subtitle}
                   </p>
                 )}
-                {currentStep.content && (
+                {currentStep?.content && (
                   <p className="text-gray-700 dark:text-gray-400 text-center leading-relaxed">
                     {currentStep.content}
                   </p>
