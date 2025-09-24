@@ -39,6 +39,9 @@ const ProcessStepper: React.FC<ProcessStepperProps> = ({
   const progressIntervalRef = useRef<number | null>(null);
   const shouldReduceMotion = useReducedMotion();
 
+  // Calculate maxSteps early to avoid hoisting issues
+  const maxSteps = steps ? Math.min(steps.length, 4) : 0;
+
   // Progress bar animation
   const animateProgress = useCallback(() => {
     if (shouldReduceMotion) {
@@ -108,7 +111,6 @@ const ProcessStepper: React.FC<ProcessStepperProps> = ({
     return <div className="p-8 text-center text-gray-500">No steps provided</div>;
   }
 
-  const maxSteps = Math.min(steps.length, 4);
   const currentStep = steps[currentIndex];
 
   // Manual navigation
