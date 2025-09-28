@@ -1,7 +1,8 @@
+import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import type { Metadata } from "next";
-import ShareButtons from '@/components/ShareButtons';
 
 // Import all blog posts data (same as in the main blog page) - NO DUPLICATES
 const blogPosts = [
@@ -616,9 +617,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           
           {post.slug === "2025-look-ahead-where-salesforce-marketing-is-headed" && (
             <div className="mt-8">
-              <img 
+              <Image 
                 src="/blog/2025-look-ahead-where-salesforce-marketing-is-headed/1.1.png" 
                 alt="Marketing Cloud Next - Future of Salesforce Marketing" 
+                width={800}
+                height={400}
                 className="w-full h-auto rounded-2xl shadow-lg"
               />
             </div>
@@ -626,9 +629,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           
           {post.slug === "champion-level-blogging-sharing-knowledge-with-the-ecosystem" && (
             <div className="mt-8">
-              <img 
+              <Image 
                 src="/blog/champion-level-blogging-sharing-knowledge-with-the-ecosystem/1.1.png" 
                 alt="Champion-Level Blogging - Thought Leadership" 
+                width={800}
+                height={400}
                 className="w-full h-auto rounded-2xl shadow-lg"
               />
             </div>
@@ -636,9 +641,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           
           {post.slug === "marketing-ops-metrics-that-prove-program-roi" && (
             <div className="mt-8">
-              <img 
+              <Image 
                 src="/blog/marketing-ops-metrics-that-prove-program-roi/1.1.png" 
                 alt="Marketing Ops Metrics - ROI Measurement" 
+                width={800}
+                height={400}
                 className="w-full h-auto rounded-2xl shadow-lg"
               />
             </div>
@@ -646,9 +653,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           
           {post.slug === "healthcare-use-cases-privacy-first-journeys-with-data-cloud" && (
             <div className="mt-8">
-              <img 
+              <Image 
                 src="/blog/healthcare-use-cases-privacy-first-journeys-with-data-cloud/1.1.png" 
                 alt="Healthcare Privacy-First Journeys - Data Cloud" 
+                width={800}
+                height={400}
                 className="w-full h-auto rounded-2xl shadow-lg"
               />
             </div>
@@ -656,9 +665,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           
           {post.slug === "from-poc-to-scale-growing-data-cloud-value-in-12-months" && (
             <div className="mt-8">
-              <img 
+              <Image 
                 src="/blog/from-poc-to-scale-growing-data-cloud-value-in-12-months/1.1.png" 
                 alt="From POC to Scale - Data Cloud Value Growth" 
+                width={800}
+                height={400}
                 className="w-full h-auto rounded-2xl shadow-lg"
               />
             </div>
@@ -666,9 +677,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           
           {post.slug === "building-triggered-sends-that-convert" && (
             <div className="mt-8">
-              <img 
+              <Image 
                 src="/blog/building-triggered-sends-that-convert/1.1.png" 
                 alt="Building Triggered Sends That Convert" 
+                width={800}
+                height={400}
                 className="w-full h-auto rounded-2xl shadow-lg"
               />
             </div>
@@ -676,22 +689,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           
           {post.slug === "erp-integration-patterns-marketing-cloud" && (
             <div className="mt-8">
-              <img 
+              <Image 
                 src="/blog/erp-integration-patterns-marketing-cloud/1.1.png" 
                 alt="ERP Integration Patterns for Marketing Cloud" 
+                width={800}
+                height={400}
                 className="w-full h-auto rounded-2xl shadow-lg"
               />
             </div>
           )}
         </header>
 
-        {/* Share Buttons */}
-        <div className="mb-8">
-          <ShareButtons 
-            title={post.title}
-            url={`https://sbconsulting.cloud/blog/${post.slug}`}
-          />
-        </div>
+        {/* Share Buttons - Removed for now */}
 
         {/* Article Content */}
         <article className="prose prose-lg max-w-none dark:prose-invert">

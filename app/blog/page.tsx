@@ -3,6 +3,17 @@
 import Link from 'next/link';
 import { useState, useMemo, useEffect } from 'react';
 
+// BlogPost interface
+interface BlogPost {
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  readTime: string;
+  category: string;
+  tags: string[];
+}
+
 // Add line-clamp styles
 const lineClampStyles = `
   .line-clamp-2 {
@@ -85,7 +96,7 @@ const GlassCard = ({ children, className = "" }: { children: React.ReactNode; cl
 };
 
 // Blog Directory Sidebar Component
-const BlogDirectory = ({ posts, onPostClick }: { posts: any[], onPostClick: (slug: string) => void }) => {
+const BlogDirectory = ({ posts, onPostClick }: { posts: BlogPost[], onPostClick: (slug: string) => void }) => {
   // Group posts by year
   const postsByYear = posts.reduce((acc, post) => {
     const year = new Date(post.date).getFullYear();
@@ -675,8 +686,8 @@ export default function Blog() {
     window.location.href = `/blog/${slug}`;
   };
 
-  // Get all unique tags
-  const allTags = [...new Set(blogPosts.flatMap(post => post.tags))];
+  // Get all unique tags (commented out as not currently used)
+  // const allTags = [...new Set(blogPosts.flatMap(post => post.tags))];
 
   // Filter posts based on search, category, and tag
   const filteredPosts = useMemo(() => {
@@ -841,7 +852,7 @@ export default function Blog() {
           {/* Blog Posts Grid */}
           <div className="flex-1">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
-            {paginatedPosts.map((post, index) => (
+            {paginatedPosts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group block min-h-[400px] md:min-h-[450px] touch-manipulation">
                 <GlassCard className="h-full cursor-pointer hover:scale-105 hover:-translate-y-2 transition-all duration-300 active:scale-95 select-none">
                   <div className="mb-4">
