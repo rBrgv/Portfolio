@@ -124,7 +124,8 @@ export default function Contact() {
                 alt="Bhargav Ramesh"
                 width={1200}
                 height={400}
-                className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+                className="w-full h-48 sm:h-56 md:h-64 lg:h-80 object-cover rounded-lg shadow-lg"
+                priority
               />
             </div>
           </div>

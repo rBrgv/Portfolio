@@ -104,7 +104,7 @@ export default function Home() {
             <div className="group bg-white dark:bg-slate-800 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:scale-105 border border-gray-200 dark:border-gray-700 flex flex-col items-center">
               <div className="w-24 h-24 mb-4 flex items-center justify-center">
                 <Image
-                  src="https://drm.my.salesforce.com/servlet/servlet.ImageServer?id=015Rf00000MAExu&oid=00DF0000000gZsu&lastMod=1746779207000"
+                  src="https://drm.my.salesforce.com/servlet/servlet.ImageServer?id=015Rf00000MAEzV&oid=00DF0000000gZsu&lastMod=1746779113000"
                   alt="Salesforce Certified Marketing Cloud Engagement Administrator"
                   width={96}
                   height={96}
@@ -118,7 +118,7 @@ export default function Home() {
             <div className="group bg-white dark:bg-slate-800 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:scale-105 border border-gray-200 dark:border-gray-700 flex flex-col items-center">
               <div className="w-24 h-24 mb-4 flex items-center justify-center">
                 <Image
-                  src="https://drm.my.salesforce.com/servlet/servlet.ImageServer?id=015Rf00000MA6fO&oid=00DF0000000gZsu&lastMod=1746782543000"
+                  src="https://drm.my.salesforce.com/servlet/servlet.ImageServer?id=015Rf00000MAExu&oid=00DF0000000gZsu&lastMod=1746779207000"
                   alt="Salesforce Certified Marketing Cloud Engagement Consultant"
                   width={96}
                   height={96}
@@ -188,7 +188,7 @@ export default function Home() {
             <div className="group bg-white dark:bg-slate-800 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:scale-105 border border-gray-200 dark:border-gray-700 flex flex-col items-center">
               <div className="w-24 h-24 mb-4 flex items-center justify-center">
                 <Image
-                  src="https://drm.my.salesforce.com/servlet/servlet.ImageServer?id=015Rf00000MA9LY&oid=00DF0000000gZsu&lastMod=1746780949000"
+                  src="https://drm.my.salesforce.com/servlet/servlet.ImageServer?id=015Rf00000MA6fO&oid=00DF0000000gZsu&lastMod=1746782543000"
                   alt="Salesforce Certified Platform Foundations"
                   width={96}
                   height={96}
@@ -366,6 +366,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
     </div>
   );
 }
