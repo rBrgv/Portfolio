@@ -38,7 +38,7 @@ export default function Home() {
             
             {/* Subtitle */}
             <p className="text-xl md:text-2xl text-muted dark:text-gray-300 mb-12 max-w-4xl mx-auto font-medium">
-              Specialized in lifecycle marketing, CRM experimentation, and multi-platform martech strategy — leveraging Salesforce Marketing Cloud, Braze, Data Cloud, and beyond
+              Specialized in lifecycle marketing, CRM experimentation, and multi-platform martech strategy across Salesforce Marketing Cloud, Braze, Data Cloud, and beyond
             </p>
 
 
