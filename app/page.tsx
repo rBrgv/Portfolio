@@ -38,7 +38,7 @@ export default function Home() {
             
             {/* Subtitle */}
             <p className="text-xl md:text-2xl text-muted dark:text-gray-300 mb-12 max-w-4xl mx-auto font-medium">
-              Specialized in lifecycle marketing, data unification, and global implementations leveraging Salesforce Marketing Cloud & Data Cloud
+              Specialized in lifecycle marketing, CRM experimentation, and multi-platform martech strategy — leveraging Salesforce Marketing Cloud, Braze, Data Cloud, and beyond
             </p>
 
 
@@ -228,7 +228,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Marketing Cloud Architecture */}
             <div className="group bg-gradient-to-br from-slate-50/50 to-slate-100/50 dark:from-slate-800/50 dark:to-slate-700/50 backdrop-blur-sm rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-105 border border-slate-200/20 dark:border-slate-700/20">
               <div className="w-12 h-12 bg-slate-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -276,6 +276,22 @@ export default function Home() {
                 100+ integrations across global programs
               </div>
             </div>
+
+            {/* CRM Experimentation & Growth */}
+            <div className="group bg-gradient-to-br from-slate-50/50 to-slate-100/50 dark:from-slate-800/50 dark:to-slate-700/50 backdrop-blur-sm rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-105 border border-slate-200/20 dark:border-slate-700/20">
+              <div className="w-12 h-12 bg-slate-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-6 h-6 text-slate-600 dark:text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-ink dark:text-white mb-4">CRM Experimentation & Growth</h3>
+              <p className="text-muted dark:text-gray-300 mb-4">
+                Design and run A/B tests, holdout experiments, and lifecycle funnels that improve activation, retention, and engagement across email, SMS, push, and in-app.
+              </p>
+              <div className="text-sm text-slate-600 dark:text-slate-400 font-semibold">
+                Data-driven growth across the full customer lifecycle
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -294,8 +310,9 @@ export default function Home() {
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {[
-              "Marketing Cloud", "Data Cloud", "Salesforce CRM", "Journey Builder",
-              "Email Studio", "Mobile Studio", "Advertising Studio", "Interaction Studio",
+              "Marketing Cloud", "Data Cloud", "Salesforce CRM", "Braze",
+              "Journey Builder", "Email Studio", "Mobile Studio", "Advertising Studio",
+              "Interaction Studio", "HubSpot", "ServiceNow", "Webhooks/iPaaS",
               "MuleSoft", "Heroku", "Commerce Cloud", "Service Cloud"
             ].map((tech, index) => (
               <span
