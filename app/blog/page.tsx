@@ -88,7 +88,7 @@ const FloatingElements = () => {
 const GlassCard = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
   return (
     <div
-      className={`backdrop-blur-md bg-white/10 dark:bg-ink/10 border border-white/20 dark:border-gray-700/20 rounded-2xl p-4 sm:p-6 md:p-8 shadow-2xl transition-all duration-300 ${className}`}
+      className={`backdrop-blur-md bg-white/10 dark:bg-ink/10 border border-white/20 dark:border-gray-700/20 rounded-2xl p-4 sm:p-6 md:p-8 shadow-2xl transition-all duration-300 overflow-hidden ${className}`}
     >
       {children}
     </div>
@@ -850,7 +850,7 @@ export default function Blog() {
           {/* Main Content with Sidebar */}
           <div className="flex gap-8">
           {/* Blog Posts Grid */}
-          <div className="flex-1">
+          <div className="flex-1 min-w-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
             {paginatedPosts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group block touch-manipulation">
