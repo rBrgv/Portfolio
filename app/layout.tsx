@@ -30,13 +30,13 @@ const dancingScript = Dancing_Script({
 });
 
 export const metadata: Metadata = {
-  title: "RB Consulting - Bhargav Ramesh | Salesforce Marketing Cloud & Data Cloud Expert",
-  description: "Bhargav Ramesh - Former Salesforce employee turned Marketing Cloud & Data Cloud consultant. I help teams ship reliable, measurable lifecycle programs across retail, manufacturing, and healthcare.",
+  title: "Bhargav Ramesh | Lifecycle Marketing & Martech Consultant",
+  description: "Bhargav Ramesh - Lifecycle marketing and martech consultant specialising in Salesforce Marketing Cloud, Braze, Data Cloud, and CRM strategy. I help teams ship reliable, measurable lifecycle programs across retail, financial services, and healthcare.",
   keywords: ["Bhargav Ramesh", "Salesforce", "Marketing Cloud", "Data Cloud", "Consultant", "Lifecycle Marketing", "Retail", "Manufacturing", "Healthcare"],
   authors: [{ name: "Bhargav Ramesh" }],
   openGraph: {
-    title: "RB Consulting - Bhargav Ramesh | Salesforce Marketing Cloud & Data Cloud Expert",
-    description: "Bhargav Ramesh - Former Salesforce employee turned Marketing Cloud & Data Cloud consultant. I help teams ship reliable, measurable lifecycle programs across retail, manufacturing, and healthcare.",
+    title: "Bhargav Ramesh | Lifecycle Marketing & Martech Consultant",
+    description: "Bhargav Ramesh - Lifecycle marketing and martech consultant specialising in Salesforce Marketing Cloud, Braze, Data Cloud, and CRM strategy. I help teams ship reliable, measurable lifecycle programs across retail, financial services, and healthcare.",
     type: "website",
   },
 };
